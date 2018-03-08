@@ -1,1 +1,1 @@
-netstat -nr
+route get default | grep "gateway"
