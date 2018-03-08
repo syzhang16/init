@@ -1,1 +1,1 @@
-nslookup slash16.org | grep "Address"
+traceroute slash16.org
