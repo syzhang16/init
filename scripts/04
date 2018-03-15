@@ -1,0 +1,10 @@
+NOM_FICHIER="/etc/crontab"
+DERNIERE_MODIF=$(date -r ${NOM_FICHIER} '+%d/%m/%Y %H:%M')
+DATE_MODIF="14/03/2018 15:30"
+
+if [ "${NOM_FICHIER}" != "${DATE_MODIF}" ]; then
+	MESSAGE="${NOM_FICHIER} a ete modifie le ${DERNIERE_MODIF}";
+	echo "MESSAGE" | mail -s /var/mail/root ";
+fi
+
+crontab -e 0 0 * * * sh scripts.sh

@@ -1,2 +1,3 @@
-{ sudo apt-get update; sudo apt-get -y upgrade; sudo apt-get -y dist-upgrade; } >> /var/log/update_script.log
-
+{ apt-get update; apt-get -y upgrade; apt-get -y dist-upgrade; } >> /var/log/update_script.log
+crontab -e
+0 4 * * 1 { apt-get update; apt-get -y upgrade; apt-get -y dist-upgrade; } >> /var/log/update_script.log
